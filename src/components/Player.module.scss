@@ -1,0 +1,176 @@
+$input_background: transparent;
+$fill: rgba(217, 217, 217, 0.71);
+$fill_active: rgba(217, 217, 217);
+$gray_front: rgba(132, 132, 132, 1);
+$text_color: rgba(255, 255, 255, 1);
+
+.player {
+
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    column-gap: 20px;
+
+    grid-template-rows: auto 44px auto;
+    padding: 31px 0;
+    // height: 20vh;
+    // display: flex;
+    // flex-direction: column;
+    margin: 0;
+    grid-column: 1/-1;
+    grid-row: 3;
+
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+
+
+
+    input {
+
+        &[type='range'] {
+            height: 34px;
+            appearance: none;
+            -webkit-appearance: none;
+            width: 100%;
+            background-color: $input_background;
+        }
+
+        &[type='range']::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 3px;
+            cursor: pointer;
+            background: $fill;
+        }
+
+        &[type='range']::-webkit-slider-thumb {
+            height: 15px;
+            width: 15px;
+            border-radius: 15px;
+            background: $fill;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -6px;
+
+            &:active {
+                background: $fill_active;
+            }
+        }
+
+        &[type='range']:focus::-webkit-slider-runnable-track {
+            background: $fill_active;
+        }
+    }
+
+    button {
+        cursor: pointer;
+        background-color: $fill;
+        border: none;
+        color: $gray_front;
+
+        &:hover {
+            background-color: $fill_active;
+        }
+
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+
+        svg {
+            width: 70%;
+            height: 70%;
+        }
+    }
+
+    button.pp {
+        svg {
+            transform: translateX(5px);
+        }
+
+        width: 100px;
+        height: 100px;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 228px;
+            border-radius: 50%;
+            height: 228px;
+
+            background: transparent;
+            border: 3px dashed rgba(255, 255, 255, 0.27);
+
+            transform: translateX(-150px) translateY(-90px);
+            pointer-events: none;
+        }
+
+
+        &::before {
+            pointer-events: none;
+            position: absolute;
+            content: '';
+            width: 438px;
+            border-radius: 50%;
+            height: 438px;
+
+            background: transparent;
+            border: 3px dashed rgba(255, 255, 255, 0.27);
+
+            transform: translateX(-180px) translateY(-180px);
+        }
+    }
+
+    button.styled {
+
+        width: 50px;
+        height: 50px;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 70px;
+            border-radius: 50%;
+            height: 70px;
+            position: absolute;
+            background: transparent;
+            outline: 2px solid $fill;
+
+            transform: translateX(-35px) translateY(-35px);
+        }
+    }
+
+    span.text {
+        color: $text_color;
+    }
+
+    .controlGroup {
+        align-items: center;
+        grid-column: 4 / span 4;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px 0;
+
+        border: 3px solid rgba(255, 255, 255, 0.5);
+        border-radius: 13px;
+    }
+
+    .track {
+        grid-column: 1/-1;
+        grid-row: 3;
+        width: 90% !important;
+        margin: 0 auto;
+    }
+
+    input.volume {
+        place-self: center;
+        transform: rotate(-90deg);
+        // max-width: 70px;
+        grid-column: 9;
+        aspect-ratio: 1/1;
+    }
+
+    .time {
+        grid-column: 2;
+        place-self: center;
+    }
+}

@@ -1,0 +1,34 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // padding: 136px 30px;
+    gap: 70px;
+
+    position: relative;
+    // width: 374px;
+    // height: 515px;
+
+    background: rgba(154, 49, 49, 0.41);
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;
+
+    z-index: 1;
+
+    a {
+        text-decoration: none;
+        font-family: 'Michroma';
+        font-style: normal;
+        font-weight: 400;
+        // font-size: 36px;
+        line-height: 51px;
+        letter-spacing: 0.16em;
+
+        color: rgba(255, 255, 255, 0.608);
+
+        &:hover {
+            color: rgba(255, 255, 255, 0.908);
+        }
+    }
+}

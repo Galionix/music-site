@@ -1,0 +1,21 @@
+.main {
+
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    column-gap: 20px;
+    grid-template-rows: 39px 100px auto 100px 85px;
+
+    height: calc(100vh - 226px);
+}
+
+.content {
+    grid-row: 3 / span 2;
+    grid-column: 3/ span 5;
+
+    height: 100%;
+    overflow: hidden;
+
+    &.expanded {
+        grid-column: 4/ span 8;
+    }
+}
