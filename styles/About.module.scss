@@ -1,0 +1,16 @@
+.about {
+    color: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(9px);
+
+    h1 {
+        font-weight: normal;
+        background: rgba(255, 255, 255, 0.47);
+        letter-spacing: 5px;
+    }
+
+    p {
+        margin: auto 0;
+    }
+
+    height: 100%;
+}
