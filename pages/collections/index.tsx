@@ -7,6 +7,7 @@ import { albums } from '../../playlist';
 import { getUrl } from '../../src/firebase/firebase-app';
 import { useEffect, useState } from 'react';
 import styles from '@/styles/collections.module.scss';
+import { MyHead } from '../../src/components/MyHead';
 
 interface Props {
   urls: {
@@ -50,35 +51,42 @@ export default function Collections({ urls }: Props) {
   // }, []);
 
   return (
-    <AboutLayout>
-      <ul className={styles.collections}>
-        {albums.map(album => {
-          //   getUrl(album.cover, url => {
-          //     setImageUrls([...imageUrls, { id: album.id, url }]);
-          //   });
+    <>
+      <MyHead
+        title='Collections'
+        description='music groups'
+        keywords='playlist, music, thedimas'
+      />
+      <AboutLayout>
+        <ul className={styles.collections}>
+          {albums.map(album => {
+            //   getUrl(album.cover, url => {
+            //     setImageUrls([...imageUrls, { id: album.id, url }]);
+            //   });
 
-          //   console.log('imageUrls: ', imageUrls);
-          return (
-            <li key={album.id}>
-              <Link href={`/collections/${album.id}`}>
-                {/* <a> */}
-                <h3>{album.title}</h3>
-                <Image
-                  src={`${
-                    urls.find(item => {
-                      return item.id === album.id;
-                    })?.url
-                  }`}
-                  alt={album.title}
-                  width={50}
-                  height={50}
-                />
-                {/* </a> */}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-    </AboutLayout>
+            //   console.log('imageUrls: ', imageUrls);
+            return (
+              <li key={album.id}>
+                <Link href={`/collections/${album.id}`}>
+                  {/* <a> */}
+                  <h3>{album.title}</h3>
+                  <Image
+                    src={`${
+                      urls.find(item => {
+                        return item.id === album.id;
+                      })?.url
+                    }`}
+                    alt={album.title}
+                    width={50}
+                    height={50}
+                  />
+                  {/* </a> */}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </AboutLayout>
+    </>
   );
 }

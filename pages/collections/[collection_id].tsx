@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import { albums } from '../../playlist';
 import { DefaultLayout } from '../../src/components/Layout';
+import { MyHead } from '../../src/components/MyHead';
 import { getPlaylistByAlbumId } from '../../src/utils/file-utils';
 
 export default function CollectionId() {
@@ -15,12 +16,19 @@ export default function CollectionId() {
       </DefaultLayout>
     );
   const tracks = getPlaylistByAlbumId(parseInt(`${collection_id}`));
-  console.log('tracks: ', tracks);
+  // console.log('tracks: ', tracks);
   return (
-    <DefaultLayout playlistId={album.id} tracks={tracks}>
-      <h1>{album.title}</h1>
-      <h2>{album.description}</h2>
-      {/* <span>collection_id: {collection_id}</span> */}
-    </DefaultLayout>
+    <>
+      <MyHead
+        title={album.title}
+        description={album.description}
+        keywords='playlist, music, thedimas'
+      />
+      <DefaultLayout playlistId={album.id} tracks={tracks}>
+        <h1>{album.title}</h1>
+        <h2>{album.description}</h2>
+        {/* <span>collection_id: {collection_id}</span> */}
+      </DefaultLayout>
+    </>
   );
 }

@@ -8,6 +8,7 @@ import { useMusicStore } from '../../src/music.store';
 import { getSongById } from '../../src/utils/file-utils';
 import s from '@/styles/TrackPage.module.scss';
 import Slider from 'react-slick';
+import { MyHead } from '../../src/components/MyHead';
 
 const settings = {
   dots: true,
@@ -72,25 +73,31 @@ export default function TrackPage() {
   //   // ]));
   // }, [currentSong, art]);
 
-  console.log('urls: ', urls);
+  // console.log('urls: ', urls);
   return (
-    <DefaultLayout>
-      {urls.length > 0 && (
-        <section className={s.art}>
-          {/* <p>{art.description}</p> */}
-          <Slider {...settings}>
-            {urls.map((url, index) => (
-              <figure key={url.src}>
-                <img src={url.src} />
-                <figcaption>{url.description}</figcaption>
-              </figure>
-            ))}
-            {/* <figure>
+    <>
+      <MyHead
+        title={'Track: ' + currentSong?.title}
+        description='music groups'
+        keywords='playlist, music, thedimas'
+      />
+      <DefaultLayout>
+        {urls.length > 0 && (
+          <section className={s.art}>
+            {/* <p>{art.description}</p> */}
+            <Slider {...settings}>
+              {urls.map((url, index) => (
+                <figure key={url.src}>
+                  <img src={url.src} />
+                  <figcaption>{url.description}</figcaption>
+                </figure>
+              ))}
+              {/* <figure>
               <img src={url} />
               <figcaption>{art.description}</figcaption>
             </figure> */}
-          </Slider>
-          {/* <Image
+            </Slider>
+            {/* <Image
             src={
               url
               // currentSong?.artwork && currentSong?.artwork.length > 0
@@ -102,10 +109,11 @@ export default function TrackPage() {
             // width={500}
             // height={500}
           /> */}
-        </section>
-      )}
-      {/* <Link href='/'>Main</Link>
+          </section>
+        )}
+        {/* <Link href='/'>Main</Link>
       <Link href='/about'>About</Link> */}
-    </DefaultLayout>
+      </DefaultLayout>
+    </>
   );
 }
