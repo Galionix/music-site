@@ -30,13 +30,19 @@ interface ITackPageProps {
 }
 
 export default function TrackPage({ artwork }: ITackPageProps) {
+  console.log('artwork: ', artwork);
   const router = useRouter();
+  const artExists = artwork.length > 0;
   const { currentSong, setSong, setCover } = useMusicStore();
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const changeSlide = useCallback(
     (direction: number) => {
+      if (!artExists) {
+        setCover('');
+        return;
+      }
       // let value =
       if (currentSlide + direction < 0) {
         setCover(artwork[artwork.length - 1].src);
@@ -54,6 +60,7 @@ export default function TrackPage({ artwork }: ITackPageProps) {
 
   useEffect(() => {
     setSong(getSongById(router.query.id as string));
+    changeSlide(1);
   }, [router, router.query.id, setSong]);
 
   const [urls, setUrls] = useState<
@@ -64,7 +71,7 @@ export default function TrackPage({ artwork }: ITackPageProps) {
   >(artwork);
 
   useEffect(() => {
-    if (artwork.length < 1) return;
+    // if (artwork.length < 1) return;
     const interval = setInterval(() => {
       changeSlide(1);
     }, 7000);
@@ -72,7 +79,7 @@ export default function TrackPage({ artwork }: ITackPageProps) {
     return () => {
       clearInterval(interval);
     };
-  }, [artwork.length, changeSlide, currentSong]); // w
+  }, [artwork.length, changeSlide, currentSong]);
 
   return (
     <>
@@ -82,7 +89,7 @@ export default function TrackPage({ artwork }: ITackPageProps) {
         keywords='playlist, music, thedimas'
       />
       <DefaultLayout>
-        {artwork.length > 0 && (
+        {artExists && (
           <section className={s.art}>
             {urls.map((url, index) => (
               <figure

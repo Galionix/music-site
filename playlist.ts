@@ -317,6 +317,24 @@ export const playlist = [
     album: '-',
     file: 'Pine - Green Sea something White and sharp Crags.mp3',
     duration: 158.4849,
+    artwork: [
+      {
+        src: '29BVo74uBEQ.jpg',
+        description: 'как приснилось так и пишу',
+      },
+      {
+        src: '7JvIWN2vv6I.jpg',
+        description: 'как приснилось так и пишу',
+      },
+      {
+        src: '-50014318_315096966.jpg',
+        description: 'как приснилось так и пишу',
+      },
+      {
+        src: '-50014318_315096967.jpg',
+        description: 'как приснилось так и пишу',
+      },
+    ],
   },
   {
     id: 38,
@@ -378,6 +396,12 @@ export const playlist = [
     album: '-',
     file: 'Pine - Henry (pre alph).mp3',
     duration: 70.661225,
+    artwork: [
+      {
+        src: 'henry.jpg',
+        description: 'Pine - Henry (pre alph)',
+      },
+    ],
   },
   {
     id: 42,
@@ -442,6 +466,16 @@ export const playlist = [
     album: '-',
     file: 'Pine - Mad sinister 1.2.0.mp3',
     duration: 277.968975,
+    artwork: [
+      {
+        src: 'h0oXG93MFfM.jpg',
+        description: 'Pine - Mad sinister 1.2.0',
+      },
+      {
+        src: 'ngqLzpcUp4w.jpg',
+        description: 'Pine - Mad sinister 1.2.0',
+      },
+    ],
   },
   {
     id: 50,
@@ -498,6 +532,24 @@ export const playlist = [
     album: '-',
     file: 'Pine - Replicant.mp3',
     duration: 262.81795,
+    artwork: [
+      {
+        src: 'replicant (1).jpg',
+        description: 'Pine - Replicant',
+      },
+      {
+        src: 'replicant (2).jpg',
+        description: 'Pine - Replicant',
+      },
+      {
+        src: 'replicant (3).jpg',
+        description: 'Pine - Replicant',
+      },
+      {
+        src: 'replicant (4).jpg',
+        description: 'Pine - Replicant',
+      },
+    ],
   },
   {
     id: 57,
@@ -987,6 +1039,20 @@ export const playlist = [
     album: '-',
     file: 'Pine - Deftone.mp3',
     duration: 274.364075,
+  },
+  {
+    id: 117,
+    title: 'Plastic guitar',
+    artist: 'Pine',
+    album: '-',
+    file: 'Pine - Plastic guitar.mp3',
+    duration: 144,
+    artwork: [
+      {
+        src: 'W6lUQOP68rk.jpg',
+        description: 'Plastic guitar',
+      },
+    ],
   },
 ];
 
