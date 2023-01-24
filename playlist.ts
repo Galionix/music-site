@@ -1328,7 +1328,7 @@ export const albums: Album[] = [
   {
     id: 7,
     title: 'Latest',
-    description: 'my latest tracks',
+    description: 'Треки от которых из ушей течёт меньше всего',
     tracks: [119, 120, 121, 122],
     cover: '/images/covers/all_tracks_cover.jpg',
   },
