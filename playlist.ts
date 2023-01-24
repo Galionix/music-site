@@ -59,6 +59,28 @@ export const playlist = [
     album: '-',
     file: 'Pine - A frozen thought.mp3',
     duration: 113.214675,
+    artwork: [
+      {
+        src: '-50014318_304426222.jpg',
+        description: '',
+      },
+      {
+        src: '-50014318_304426223.jpg',
+        description: '',
+      },
+      {
+        src: '-50014318_304426224.jpg',
+        description: '',
+      },
+      {
+        src: '-50014318_304426225.jpg',
+        description: '',
+      },
+      {
+        src: '-50014318_304426226.jpg',
+        description: '',
+      },
+    ],
   },
   {
     id: 7,
@@ -67,6 +89,12 @@ export const playlist = [
     album: '-',
     file: 'Pine - A sound.mp3',
     duration: 87.5102,
+    artwork: [
+      {
+        src: 'D9jpS4ET8wk.jpg',
+        description: '',
+      },
+    ],
   },
   {
     id: 8,
@@ -75,6 +103,12 @@ export const playlist = [
     album: '-',
     file: 'Pine - A-morphed city dweller.mp3',
     duration: 41.247325,
+    artwork: [
+      {
+        src: '-50014318_304163958.jpg',
+        description: '',
+      },
+    ],
   },
   {
     id: 9,
@@ -107,6 +141,20 @@ export const playlist = [
     album: '-',
     file: 'Pine - Bad day 4 a gud guy (demo4ka).mp3',
     duration: 72.09795,
+    artwork: [
+      {
+        src: '-50014318_301452214.jpg',
+        description: 'Pine - Bad day 4 a gud guy2',
+      },
+      {
+        src: '-50014318_301452215.jpg',
+        description: 'Pine - Bad day 4 a gud guy2',
+      },
+      {
+        src: '-50014318_301452216.jpg',
+        description: 'Pine - Bad day 4 a gud guy2',
+      },
+    ],
   },
   {
     id: 13,
@@ -301,6 +349,12 @@ export const playlist = [
     album: '-',
     file: 'Pine - Float.mp3',
     duration: 173.583675,
+    artwork: [
+      {
+        src: '44655761_294921346.jpg',
+        description: 'video at https://youtu.be/TrpXB0wYwwY',
+      },
+    ],
   },
   {
     id: 36,
@@ -309,6 +363,12 @@ export const playlist = [
     album: '-',
     file: 'Pine - Forgive me.mp3',
     duration: 144.091425,
+    artwork: [
+      {
+        src: '-50014318_300482640.jpg',
+        description: 'Электродинамику начал делать, чьорт',
+      },
+    ],
   },
   {
     id: 37,
@@ -606,6 +666,12 @@ export const playlist = [
     album: '-',
     file: 'Pine - Sanctity v2.mp3',
     duration: 92.368975,
+    artwork: [
+      {
+        src: '-50014318_303388352.jpg',
+        description: 'Pine - Sanctity v2',
+      },
+    ],
   },
   {
     id: 64,
@@ -614,6 +680,12 @@ export const playlist = [
     album: '-',
     file: 'Pine - Sanctity.mp3',
     duration: 103.601625,
+    artwork: [
+      {
+        src: 'sPuck2CH728.jpg',
+        description: 'Pine - Sanctity',
+      },
+    ],
   },
   {
     id: 65,
@@ -630,6 +702,12 @@ export const playlist = [
     album: '-',
     file: 'Pine - Sandal.mp3',
     duration: 190.066925,
+    artwork: [
+      {
+        src: '-50014318_301920480.jpg',
+        description: 'Давайте вспомним нечто прекрасное?',
+      },
+    ],
   },
   {
     id: 67,
@@ -686,6 +764,12 @@ export const playlist = [
     album: '-',
     file: 'Pine - Step into my.mp3',
     duration: 170.919175,
+    artwork: [
+      {
+        src: '-50014318_304241325.jpg',
+        description: 'like a heart',
+      },
+    ],
   },
   {
     id: 74,
@@ -817,6 +901,13 @@ export const playlist = [
     album: '-',
     file: 'Pine - cosmo included.mp3',
     duration: 96.2351,
+    artwork: [
+      {
+        src: '-50014318_298331189.jpg',
+        description:
+          'Мама сказала что это молодой парень сидит на скамейке рядом с детской площадкой и думает о том, какие у него проблемы с девушкой, ноя пытался передать чувство, с которым уходит детство. Когда у тебя появляются новые возможности, и отсекаются былые, линию пытался провести.',
+      },
+    ],
   },
   {
     id: 90,
@@ -881,6 +972,13 @@ export const playlist = [
     album: '-',
     file: 'Pine - psichologist.mp3',
     duration: 146.23345,
+    artwork: [
+      {
+        src: '-50014318_301427232.jpg',
+        // sizes: '500x500',
+        description: '',
+      },
+    ],
   },
   {
     id: 98,
@@ -889,6 +987,12 @@ export const playlist = [
     album: '-',
     file: 'Pine - reachable (demo).mp3',
     duration: 103.471,
+    artwork: [
+      {
+        src: '-50014318_299291829.jpg',
+        description: '',
+      },
+    ],
   },
   {
     id: 99,
@@ -921,6 +1025,12 @@ export const playlist = [
     album: '-',
     file: 'Pine - sleep sugar.mp3',
     duration: 106.76245,
+    artwork: [
+      {
+        src: '-50014318_299580879.jpg',
+        sizes: 'Життя iде i все без коректур. #Дежавю, чёрт',
+      },
+    ],
   },
   {
     id: 103,
@@ -985,6 +1095,24 @@ export const playlist = [
     album: '-',
     file: 'pINE - Phase 1, the silence.mp3',
     duration: 268.617125,
+    artwork: [
+      {
+        src: '-50014318_305847677.jpg',
+        description: 'тише',
+      },
+      {
+        src: '-50014318_305847678.jpg',
+        description: 'тише',
+      },
+      {
+        src: '9752688_306568505.jpg',
+        description: 'тише',
+      },
+      {
+        src: '9752688_306568463.jpg',
+        description: 'тише',
+      },
+    ],
   },
   {
     id: 111,
@@ -993,6 +1121,16 @@ export const playlist = [
     album: '-',
     file: 'Зшту - Bez paleva.mp3',
     duration: 170.76245,
+    artwork: [
+      {
+        src: '-50014318_304512974.jpg',
+        description: '',
+      },
+      {
+        src: '-50014318_304512973.jpg',
+        description: '',
+      },
+    ],
   },
   {
     id: 112,
@@ -1009,6 +1147,12 @@ export const playlist = [
     album: '-',
     file: 'мумий тролль - штормоотрол (Pine).mp3',
     duration: 110.863675,
+    artwork: [
+      {
+        src: '-50014318_301378181.jpg',
+        description: '',
+      },
+    ],
   },
   {
     id: 114,
@@ -1053,6 +1197,13 @@ export const playlist = [
         description: 'Plastic guitar',
       },
     ],
+  },
+  {
+    id: 118,
+    title: 'JourneyToTheMoon',
+    artist: 'Pine',
+    album: '-',
+    file: 'Pine - JourneyToTheMoon.mp3',
   },
 ];
 
