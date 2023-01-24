@@ -618,6 +618,20 @@ export const playlist = [
     album: '-',
     file: 'Pine - Reptile ext.mp3',
     duration: 207.54285,
+    artwork: [
+      {
+        src: '-50014318_339810473.jpg',
+        description: 'Pine - Reptile ext',
+      },
+      {
+        src: '-50014318_339810474.jpg',
+        description: 'Pine - Reptile ext',
+      },
+      {
+        src: '-50014318_339810751.jpg',
+        description: 'Pine - Reptile ext',
+      },
+    ],
   },
   {
     id: 58,
