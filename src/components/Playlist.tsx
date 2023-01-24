@@ -41,7 +41,7 @@ export const Playlist = ({
   return (
     <section className={s.playlist}>
       <ul ref={containerRef}>
-        {displayPlaylist.map((song, index) => (
+        {[...displayPlaylist].map((song, index) => (
           <li
             ref={currentSong?.id === song.id ? childRef : null}
             className={`${s.playlistItem} ${

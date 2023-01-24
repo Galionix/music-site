@@ -117,12 +117,12 @@ export const playlist = [
     duration: 135.079175,
     artwork: [
       {
-        src: 'f339b67431abfd0e7ede89fda36d2185.jpg',
-        description: 'Pine - Bad day 4 a gud guy',
-      },
-      {
         src: 'depressed-depression.gif',
         description: 'Pine - Bad day 4 a gud guy2',
+      },
+      {
+        src: 'f339b67431abfd0e7ede89fda36d2185.jpg',
+        description: 'Pine - Bad day 4 a gud guy',
       },
     ],
   },
@@ -325,6 +325,28 @@ export const playlist = [
     album: '-',
     file: 'Pine - Green feeling.mp3',
     duration: 192.731425,
+    artwork: [
+      {
+        src: 'green-feeling (1).jpg',
+        description: 'Pine - Green feeling',
+      },
+      {
+        src: 'green-feeling (2).jpg',
+        description: 'Pine - Green feeling',
+      },
+      {
+        src: 'green-feeling (3).jpg',
+        description: 'Pine - Green feeling',
+      },
+      {
+        src: 'green-feeling (4).jpg',
+        description: 'Pine - Green feeling',
+      },
+      {
+        src: 'green-feeling (5).jpg',
+        description: 'Pine - Green feeling',
+      },
+    ],
   },
   {
     id: 39,
@@ -333,6 +355,13 @@ export const playlist = [
     album: '-',
     file: 'Pine - Hello.mp3',
     duration: 277.4204,
+    date: '09.02.2015',
+    artwork: [
+      {
+        src: 'hello.jpg',
+        description: 'Снова сорвался на эмоции',
+      },
+    ],
   },
   {
     id: 40,
@@ -621,6 +650,16 @@ export const playlist = [
     album: '-',
     file: 'Pine - Taktak.mp3',
     duration: 154.88,
+    artwork: [
+      {
+        src: 'taktak.jpg',
+        description: 'Taktak',
+      },
+      {
+        src: 'taktak2.jpg',
+        description: 'Taktak',
+      },
+    ],
   },
   {
     id: 76,

@@ -10,7 +10,6 @@ export const firebaseConfig = {
   messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.FIREBASE_APP_ID,
 };
-console.log('firebaseConfig: ', firebaseConfig);
 
 // export const dbBasePath =
 //   process.env.NEXT_PUBLIC_STORE_ID + '/' + process.env.NEXT_PUBLIC_STORE_DOC;
@@ -21,7 +20,6 @@ export const firebaseApp = !getApps().length
 
 // export const auth = getAuth();
 export const db = getFirestore(firebaseApp);
-// console.log(db.toJSON());
 
 export const googleAuthProvider = new GoogleAuthProvider();
 
@@ -29,10 +27,10 @@ import { getStorage, ref, getDownloadURL } from 'firebase/storage';
 
 const storage = getStorage(firebaseApp, 'gs://music-dimas.appspot.com');
 
-export function getUrl(url: string, callback: (url: string) => void) {
+export function getUrl(url: string, callback?: (url: string) => void) {
   return getDownloadURL(ref(storage, url))
     .then(url => {
-      callback(url);
+      callback && callback(url);
       return url;
     })
     .catch(error => {

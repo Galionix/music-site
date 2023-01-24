@@ -1,45 +1,85 @@
 .art {
-    // display: flex;
+display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
     width: 100%;
     height: 100%;
+position: relative;
 
-    div {
+// div {
+    //     grid-row: 3;
+    //         grid-column: 3 / span 5;
+    //     }
+
+    img {
+        position: absolute;
+        inset:0;
+        border-radius: 25px;
+        width: 100%;
         height: 100%;
+        max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            object-position: center;
+    }
+    // img.back{
+    //     position: absolute;
+    //     inset:0;
+    //     width: 100vw;
+    //     height: 100vw;
+    // }
+  //   p,
+  //   figcaption {
+  //     position: relative;
+  //     z-index: 1;
+  //     background: rgba(0, 0, 0, 0.5);
+  //     backdrop-filter: blur(10px);
+  //     color: white;
+  //     padding: 5px 30px;
+  //     border-radius: 5px;
+  //     letter-spacing: 5px;
+  //     // z-index: 10000;
+
+//     figcaption {
+    //       position: absolute;
+    //       top: 0;
+    //       left: 50%;
+    //       opacity: 0;
+    //       transition: opacity ease-in-out 1s;
+    //     }
+    //     margin: 0 auto;
+    //   }
+
+  figure {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+        max-height: 100%;
+        grid-column: 1;
+        grid-row: 1;
+        opacity: 0;
+        transition: opacity ease-in-out 2s;
+
+
+        // transform: translateY(-25%);
+
+        &.active {
+            opacity: 1;
     }
 
-    p,
     figcaption {
-        position: relative;
-        z-index: 1;
-        background: rgba(0, 0, 0, 0.5);
+        // opacity: 0;
+    position: absolute;
+        top: 10px;
+            left: 25%;
+            transition: opacity ease-in-out .3s;
+
+    background: rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(10px);
         color: white;
         padding: 5px 30px;
         border-radius: 5px;
-        letter-spacing: 5px;
-        // z-index: 10000;
     }
-
-    figure {
-        height: 100%;
-        position: relative;
-    }
-
-    figcaption {
-        position: absolute;
-        top: 0;
-        left: 50%;
-    }
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
-    // img {
-    //     max-width: 50vw;
-    //     object-fit: contain;
-    //     margin: 0 auto;
     // }
+  }
 }

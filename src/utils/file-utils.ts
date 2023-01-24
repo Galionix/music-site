@@ -16,22 +16,28 @@ export function formatDuration(duration: number) {
 }
 
 export function useNextTrack() {
-  const { currentSong, loopPlaylist, currentPlaylist } = useMusicStore();
+  const { currentSong, loopMode, currentPlaylist } = useMusicStore();
   const index = currentPlaylist.findIndex(
     track => track.id === currentSong?.id,
   );
-  if (currentPlaylist[index + 1] === undefined && loopPlaylist) {
+  if (
+    currentPlaylist[index + 1] === undefined
+    // && loopMode === 'playlist'
+  ) {
     return currentPlaylist[0];
   }
   return currentPlaylist[index + 1];
 }
 
 export function usePreviousTrack() {
-  const { currentSong, loopPlaylist, currentPlaylist } = useMusicStore();
+  const { currentSong, loopMode, currentPlaylist } = useMusicStore();
   const index = currentPlaylist.findIndex(
     track => track.id === currentSong?.id,
   );
-  if (currentPlaylist[index - 1] === undefined && loopPlaylist) {
+  if (
+    currentPlaylist[index - 1] === undefined
+    // && loopMode === 'playlist'
+  ) {
     return currentPlaylist[currentPlaylist.length - 1];
   }
   return currentPlaylist[index - 1];
@@ -42,10 +48,7 @@ export function getSongById(id: string): Track | undefined {
 }
 
 export function getPlaylistByAlbumId(id: number): Track[] {
-  // console.log('id: ', id);
-
-  const album = albums.find(album => album.id === id);
-  // console.log('album: ', album);
+  // const album = albums.find(album => album.id === id);
 
   return playlist.filter(track =>
     albums.find(album => album.id === id)?.tracks.includes(track.id),

@@ -3,7 +3,7 @@ import { albums } from '../../playlist';
 import { DefaultLayout } from '../../src/components/Layout';
 import { MyHead } from '../../src/components/MyHead';
 import { getPlaylistByAlbumId } from '../../src/utils/file-utils';
-
+import s from '@/styles/CollectionPage.module.scss';
 export default function CollectionId() {
   const {
     query: { collection_id },
@@ -16,7 +16,6 @@ export default function CollectionId() {
       </DefaultLayout>
     );
   const tracks = getPlaylistByAlbumId(parseInt(`${collection_id}`));
-  // console.log('tracks: ', tracks);
   return (
     <>
       <MyHead
@@ -25,8 +24,10 @@ export default function CollectionId() {
         keywords='playlist, music, thedimas'
       />
       <DefaultLayout playlistId={album.id} tracks={tracks}>
-        <h1>{album.title}</h1>
-        <h2>{album.description}</h2>
+        <section className={s.collection}>
+          <h1>{album.title}</h1>
+          <h2>{album.description}</h2>
+        </section>
         {/* <span>collection_id: {collection_id}</span> */}
       </DefaultLayout>
     </>

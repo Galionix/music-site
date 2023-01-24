@@ -34,22 +34,6 @@ export const getStaticProps = async () => {
   };
 };
 export default function Collections({ urls }: Props) {
-  //   console.log('urls: ', urls);
-  //   const [imageUrls, setImageUrls] = useState<
-  //     {
-  //       id: number;
-  //       url: string;
-  //     }[]
-  //   >([]);
-
-  // useEffect(() => {
-  //     // get image urls
-  //     const urls = albums.map(async album => {
-  //         return await getUrl(album.cover);
-  //     });
-
-  // }, []);
-
   return (
     <>
       <MyHead
@@ -60,11 +44,6 @@ export default function Collections({ urls }: Props) {
       <AboutLayout>
         <ul className={styles.collections}>
           {albums.map(album => {
-            //   getUrl(album.cover, url => {
-            //     setImageUrls([...imageUrls, { id: album.id, url }]);
-            //   });
-
-            //   console.log('imageUrls: ', imageUrls);
             return (
               <li key={album.id}>
                 <Link href={`/collections/${album.id}`}>

@@ -3,8 +3,8 @@ import { Album, albums, Track } from '../playlist';
 import { persist } from 'zustand/middleware';
 
 interface MusicStore {
-  loopPlaylist: boolean;
-  setLoopPlaylist: (loopPlaylist: boolean) => void;
+  loopMode: 'none' | 'playlist' | 'song';
+  setLoopMode: (loopMode: 'none' | 'playlist' | 'song') => void;
   currentSong: Track | undefined;
   setSong: (song: Track | undefined) => void;
   setPlaylist: (playlist: Track[]) => void;
@@ -13,18 +13,24 @@ interface MusicStore {
   setAlbum: (album: Album | undefined) => void;
   volume: number;
   setVolume: (volume: number) => void;
+  cover: string;
+  setCover: (cover: string) => void;
 }
 
 export const useMusicStore = create<MusicStore>()(
   persist(
     set => ({
+      cover: '',
+      setCover: (cover: string) => {
+        set(state => ({ cover }));
+      },
       album: albums[0],
       setAlbum: (album: Album | undefined) => {
         set(state => ({ album }));
       },
-      loopPlaylist: false,
-      setLoopPlaylist: (loopPlaylist: boolean) => {
-        set(state => ({ loopPlaylist }));
+      loopMode: 'none',
+      setLoopMode: (loopMode: 'none' | 'playlist' | 'song') => {
+        set(state => ({ loopMode }));
       },
       volume: 0.5,
       setVolume: (volume: number) => {
