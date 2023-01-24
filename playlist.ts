@@ -1219,6 +1219,50 @@ export const playlist = [
     album: '-',
     file: 'Pine - JourneyToTheMoon.mp3',
   },
+  {
+    id: 119,
+    title: 'top_dungeon',
+    artist: 'Pine',
+    album: '-',
+    file: 'top_dungeon.mp3',
+    duration: 137,
+  },
+  {
+    id: 120,
+    title: 'top_dungeon2',
+    artist: 'Pine',
+    album: '-',
+    file: 'top_dungeon2.mp3',
+    duration: 194,
+  },
+  {
+    id: 121,
+    title: '90s',
+    artist: 'Rage-Zone',
+    album: '-',
+    file: 'Rage-Zone - 90s.mp3',
+    duration: 164,
+    artwork: [
+      {
+        src: 'image.jpg',
+        description: 'Эти треки теперь родные',
+      },
+    ],
+  },
+  {
+    id: 122,
+    title: 'hi-fi',
+    artist: 'Rage-Zone',
+    album: '-',
+    file: 'Rage-Zone - HI-FI.mp3',
+    duration: 194,
+    artwork: [
+      {
+        src: 'image.jpg',
+        description: 'Cозданы в коллективе с Виталиком',
+      },
+    ],
+  },
 ];
 
 /*
@@ -1280,5 +1324,12 @@ export const albums: Album[] = [
     description: 'Essences tracks',
     tracks: [63, 50, 115, 15, 66, 27, 89, 102, 10, 13, 75, 48, 116, 26],
     cover: '/images/covers/essences.jpg',
+  },
+  {
+    id: 7,
+    title: 'Latest',
+    description: 'my latest tracks',
+    tracks: [119, 120, 121, 122],
+    cover: '/images/covers/all_tracks_cover.jpg',
   },
 ];
