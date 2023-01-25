@@ -60,6 +60,7 @@ export const Playlist = ({
             //   setSong(song);
             // }}
           >
+            <BadgesSection song={song} />
             <Link key={song.id} href={`/track/${song.id}`}>
               <button
                 onClick={() => {
@@ -79,7 +80,10 @@ export const Playlist = ({
             </Link>
             {/* </Link> */}
             {/* <p>{index + 1}</p> */}
-            <Link key={song.id} href={`/track/${song.id}`}>
+            <Link
+              // key={song.id}
+              href={`/track/${song.id}`}
+            >
               {/* <p>{`${song.id} ${index} ${key}`}</p> */}
               <p>{song.title}</p>
             </Link>
@@ -93,3 +97,19 @@ export const Playlist = ({
 };
 
 export const MemoizedPlaylist = memo(Playlist);
+
+function BadgesSection({ song }: { song: Track }) {
+  if (!song.artwork || song.artwork.length === 0) return null;
+  return (
+    <div className={s.badgesSection}>
+      <ArtworkBadge song={song} />
+    </div>
+  );
+}
+
+function ArtworkBadge({ song }: { song: Track }) {
+  if (!song.artwork || song.artwork.length === 0) return null;
+  return (
+    <span className={s.badge + ' ' + s.artwork}>A {song.artwork.length}</span>
+  );
+}

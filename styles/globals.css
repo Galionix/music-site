@@ -19,20 +19,31 @@ html {
   max-height: 100vh;
     overflow: hidden;
     background: rgb(27, 27, 27);
+    /* outline: 10px solid black; */
 }
 
 :root {
-  font-size: 16px;
+  /* font-size: clamp(20px, 1vw, 23px); */
+    background: rgb(27, 27, 27);
+    outline: 10px solid black;
 }
 
-@media screen and (max-width: 768px) {
+ @media screen and (min-width: 481px) {
   :root {
-    font-size: 10px;
+    font-size: clamp(16px, 3vw, 20px);
   }
 }
 
 @media screen and (max-width: 480px) {
   :root {
-    font-size: 7px;
+    font-size: clamp(12px, 3vw, 16px);
   }
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
 }

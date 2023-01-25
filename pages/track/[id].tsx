@@ -30,7 +30,7 @@ interface ITackPageProps {
 }
 
 export default function TrackPage({ artwork }: ITackPageProps) {
-  console.log('artwork: ', artwork);
+  // console.log('artwork: ', artwork);
   const router = useRouter();
   const artExists = artwork.length > 0;
   const { currentSong, setSong, setCover } = useMusicStore();
@@ -55,20 +55,21 @@ export default function TrackPage({ artwork }: ITackPageProps) {
         setCurrentSlide(currentSlide + direction);
       }
     },
-    [artwork.length, artwork, currentSlide, setCover],
+    [artExists, artwork, currentSlide, setCover],
   );
 
   useEffect(() => {
     setSong(getSongById(router.query.id as string));
     changeSlide(1);
-  }, [router, router.query.id, setSong]);
+    console.log('changeSlide(1);');
+  }, [router.query.id]);
 
-  const [urls, setUrls] = useState<
-    {
-      src: string;
-      description: string;
-    }[]
-  >(artwork);
+  // const [urls, setUrls] = useState<
+  //   {
+  //     src: string;
+  //     description: string;
+  //   }[]
+  // >(artwork);
 
   useEffect(() => {
     // if (artwork.length < 1) return;
@@ -79,7 +80,7 @@ export default function TrackPage({ artwork }: ITackPageProps) {
     return () => {
       clearInterval(interval);
     };
-  }, [artwork.length, changeSlide, currentSong]);
+  }, [changeSlide, currentSong?.id]);
 
   return (
     <>
@@ -91,7 +92,7 @@ export default function TrackPage({ artwork }: ITackPageProps) {
       <DefaultLayout>
         {artExists && (
           <section className={s.art}>
-            {urls.map((url, index) => (
+            {artwork.map((url, index) => (
               <figure
                 className={index === currentSlide ? s.active : ''}
                 key={url.src}
@@ -139,6 +140,7 @@ export async function getStaticProps(
     });
   }
 
+  // console.log('artwork: ', artwork);
   return {
     props: { artwork },
   };

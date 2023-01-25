@@ -48,6 +48,9 @@ export const Player = () => {
 
   return (
     <menu className={s.player}>
+      <span className={s.text + ' ' + s.title}>
+        {currentSong?.artist} - {currentSong?.title}
+      </span>
       <span className={s.text + ' ' + s.time}>
         {formatDuration(currentTime)} / {formatDuration(duration)}
       </span>
