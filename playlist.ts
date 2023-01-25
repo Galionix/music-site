@@ -5,13 +5,14 @@ export interface Track {
   album: string;
   file: string;
   duration: number;
+  date?: string;
   artwork?: {
     src: string;
     description: string;
   }[];
 }
 
-export const playlist = [
+export const playlist:Track[] = [
   {
     id: 1,
     title: 'astrobell',
@@ -1042,7 +1043,7 @@ export const playlist = [
     artwork: [
       {
         src: '-50014318_299580879.jpg',
-        sizes: 'Життя iде i все без коректур. #Дежавю, чёрт',
+        description: 'Життя iде i все без коректур. #Дежавю, чёрт',
       },
     ],
   },
@@ -1218,6 +1219,7 @@ export const playlist = [
     artist: 'Pine',
     album: '-',
     file: 'Pine - JourneyToTheMoon.mp3',
+    duration: 200
   },
   {
     id: 119,
