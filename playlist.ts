@@ -1348,4 +1348,11 @@ export const albums: Album[] = [
     tracks: [119, 120, 121, 122],
     cover: '/images/covers/all_tracks_cover.jpg',
   },
+  {
+    id: 8,
+    title: '❤️',
+    description: '❤️',
+    tracks: [123, 124],
+    cover: '/images/covers/6HT38GDboyo.jpg',
+  }
 ];
