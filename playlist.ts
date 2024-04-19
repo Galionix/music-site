@@ -1264,6 +1264,20 @@ export const playlist:Track[] = [
         description: 'Cозданы в коллективе с Виталиком',
       },
     ],
+  },  {
+    id: 123,
+    title: 'Ni',
+    artist: 'Pine',
+    album: '-',
+    file: 'Ni .mp3',
+    duration: 61,
+  },  {
+    id: 124,
+    title: 'Ni[2]',
+    artist: 'Pine',
+    album: '-',
+    file: 'Ni[2] .mp3',
+    duration: 277,
   },
 ];
 
