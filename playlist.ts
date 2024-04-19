@@ -1218,7 +1218,7 @@ export const playlist:Track[] = [
     title: 'JourneyToTheMoon',
     artist: 'Pine',
     album: '-',
-    file: 'Pine - JourneyToTheMoon.mp3',
+    file: 'Pine - JourneyToTheMoon .mp3',
     duration: 200
   },
   {
@@ -1269,14 +1269,14 @@ export const playlist:Track[] = [
     title: 'Ni',
     artist: 'Pine',
     album: '-',
-    file: 'Ni .mp3',
+    file: 'Pine - Ni .mp3',
     duration: 61,
   },  {
     id: 124,
     title: 'Ni[2]',
     artist: 'Pine',
     album: '-',
-    file: 'Ni[2] .mp3',
+    file: 'Pine - Ni[2] .mp3',
     duration: 277,
   },
 ];
